@@ -1,0 +1,14 @@
+[DEFAULT]
+
+ignoreip = 127.0.0.1/8 192.168.1.0/24 10.111.112.0/24 172.17.0.0/16
+bantime = 86400
+findtime = 12h
+maxretry = 3
+
+[npm-docker]
+enabled = true
+chain = DOCKER-USER
+port = 80,443
+logpath = /log/npm/default-host_*.log
+          /log/npm/proxy-host-*.log
+action = iptables-custom-multi
